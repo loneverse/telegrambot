@@ -74,6 +74,10 @@ python telegram_scraper.py  # Assuming `telegram_scraper.py` is the scraper scri
 
 Refer to the provided Swagger documentation for detailed API endpoint descriptions, usage examples, and request/response formats.
 
+when the server is running, find the documentation at 
+
+``http://localhost:3000/api-docs/#/default/get_messages``
+
 **Customization:**
 
 * Update configuration files in the `config` directory to tailor the project to your specific needs (database connection details, email settings, etc.).
