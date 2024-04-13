@@ -14,19 +14,19 @@ This project implements a server-side application that scrapes messages from the
 
 **Technology Stack:**
 
-* **Scraper Language:** Choose either Golang or Python based on your preference (both are supported).
-* **Backend Language:** Node.js is the preferred backend language for this project (alternatives are Golang or Python).
+* **Scraper Language:** Python
+* **Backend Language:** Node.js is the preferred backend language for this project (Python).
 * **Database:** PostgreSQL is used for reliable data storage.
 * **API:** RESTful API provides structured access to scraped messages.
 * **Documentation:** Swagger facilitates interactive API exploration.
 
 **Project Structure:**
 
-* **backend/**: Contains Node.js server-side code (adjust for Golang or Python).
+* **backend/**: Contains Node.js server-side code (Python).
 * **config/**: Stores configuration files (e.g., database connection details, email settings).
 * **db/**: Houses database-related logic and migrations (if applicable).
 * **docs/**: Optional directory for API documentation files.
-* **scraper/**: Contains the Python script (`telegram_scraper.py`) for scraping messages if using Python (adjust if using Golang).
+* **scraper/**: Contains the Python script (`telegram_scraper.py`) for scraping messages if using Python.
 * **utils/**: Optional directory for utility functions shared across the project.
 
 **Installation**
@@ -54,12 +54,6 @@ python -m venv venv  # Create virtual environment (adjust command if using virtu
 source venv/bin/activate  # Activate virtual environment (adjust command if using virtualenv)
 ```
 
-**Dependencies:** Install Python dependencies from `requirements.txt` within the activated virtual environment:
-
-```bash
-pip install -r requirements.txt
-```
-
 **Running the Server:**
 
 **Node.js:**
@@ -85,3 +79,18 @@ Refer to the provided Swagger documentation for detailed API endpoint descriptio
 * Update configuration files in the `config` directory to tailor the project to your specific needs (database connection details, email settings, etc.).
 * Modify the scraper script (`telegram_scraper.py`) to adjust scraping behavior if using Python.
 * Implement additional features or modify existing ones to suit your project requirements.
+
+Using a `.env` File for Secret Keys:
+
+Create a file named `.env` in the config directory.
+
+Add environment variables for sensitive information like your Telegram bot token, database connection details, and email credentials:
+
+```bash
+TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN
+DATABASE_URL=postgres://user:password@host:port/database
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+EMAIL_USERNAME=your_username
+EMAIL_PASSWORD=your_password
+```
