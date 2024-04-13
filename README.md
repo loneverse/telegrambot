@@ -15,6 +15,32 @@ This project implements a server-side application that scrapes messages from the
 * **Scraper Language:** Python
 * **Backend Language:** Node.js is the preferred backend language for this project (Python).
 * **Database:** PostgreSQL is used for reliable data storage.
+
+
+
+### Setting Up Postgresql
+
+1. Open the PostgreSQL command-line interface by running the following command in your terminal:
+
+```
+sudo -u postgres psql
+```
+
+This will open the PostgreSQL interactive terminal client.
+
+2. Connect to your database by running the following command, replacing `your_database_name` with the name of your database:
+
+```
+\c your_database_name
+```
+
+3. Once you're connected to your database, you can check if the table exists by running the following command:
+
+```
+\dt
+```
+
+
 * **API:** RESTful API provides structured access to scraped messages.
 * **Documentation:** Swagger facilitates interactive API exploration.
 
