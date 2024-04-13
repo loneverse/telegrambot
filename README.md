@@ -1,5 +1,3 @@
-Absolutely, here's the formatted README in markdown:
-
 ## Telegram Scrapping Server
 
 This project implements a server-side application that scrapes messages from the "Bitcoin Industry" Telegram group chat. It leverages different technologies to provide several functionalities:
