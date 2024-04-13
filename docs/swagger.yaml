@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Telegram Scraping API
+  version: 1.0.0
+
+paths:
+  /messages:
+    get:
+      summary: Get paginated messages
+      parameters:
+        - name: page
+          in: query
+          description: Page number
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          description: Number of messages per page
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+
+components:
+  schemas:
+    Message:
+      type: object
+      properties:
