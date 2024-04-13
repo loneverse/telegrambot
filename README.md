@@ -115,10 +115,13 @@ Create a file named `.env` in the config directory.
 Add environment variables for sensitive information like your Telegram bot token, database connection details, and email credentials:
 
 ```bash
-TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN
-DATABASE_URL=postgres://user:password@host:port/database
-EMAIL_HOST=smtp.example.com
-EMAIL_PORT=587
-EMAIL_USERNAME=your_username
-EMAIL_PASSWORD=your_password
+POSTGRES_USER=<POSTGRES_DB_USERNAME>
+POSTGRES_PASSWORD=<PASSWORD>
+POSTGRES_DB=<DB>
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+EMAIL_USER=<USERNAME>
+EMAIL_PASS=<PASSWORD>
+TELEGRAM_BOT_TOKEN =<Bot Token>
+TARGET_CHAT_ID=<chatID>
 ```
